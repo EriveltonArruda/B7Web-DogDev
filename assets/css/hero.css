@@ -1,0 +1,47 @@
+/* Imagem no celular, o cachorro fica embaixo */
+.hero {
+  background-image: url("../images/hero-center.png");
+  background-size: auto 40rem;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-color: var(--hero-background);
+}
+
+/* Área da imagem e do texto */
+.hero .box {
+  padding: 4rem 2rem 28rem 2rem;
+  max-width: 60rem;
+}
+
+/* Texto principal */
+.hero h1 {
+  font-family: "Grandstander", sans-serif;
+  font-weight: bold;
+  letter-spacing: -0.1rem;
+  font-size: 5rem;
+  line-height: 6rem;
+}
+
+/* Cor personalizada do texto */
+.hero h1 span {
+  color: var(--secondary);
+}
+
+/* Texto secundário */
+.hero h2 {
+  font-weight: normal;
+  font-size: 2rem;
+  margin: 3rem 0;
+}
+
+@media (width > 900px) {
+  /* No pc, a imagem fica do lado e não no centro */
+  .hero {
+    background-image: url("../images/hero.png");
+    background-size: auto;
+  }
+
+  .hero .box {
+    padding: 15rem 2rem;
+  }
+}
