@@ -14,9 +14,81 @@
   color: var(--secondary);
 }
 
+/* Área onde ficarão os "cards", no celular só terá 1 coluna */
 .products .grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 3rem;
   margin: 5rem 0;
+}
+
+/* Estilo dos cards */
+.products .product {
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  text-decoration: none;
+  background-color: var(--background);
+  color: var(--primary);
+}
+
+/* Tamanho da imagem */
+.products .product .image {
+  width: 12rem;
+  min-height: 15rem;
+  overflow: hidden;
+  background-size: cover;
+}
+
+/* Área do texto do card */
+.products .product .info {
+  flex: 1;
+  padding: 2rem;
+}
+
+/*  Título do card */
+.products .product .title {
+  font-family: "Grandstander", sans-serif;
+  font-weight: bold;
+  letter-spacing: -0.1rem;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Nome "Saiba Mais" */
+.products .product .link {
+  color: var(--secondary);
+  margin-top: 2rem;
+  /* Não vai aparecer no celular, só no tablet e desktop */
+  display: none;
+}
+
+/* Tablet */
+@media (width > 600px) {
+  /* 2 colunas */
+  .products .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Colocando a imagem em cima do texto */
+  .products .product {
+    flex-direction: column;
+  }
+
+  /* Aumentando a imagem */
+  .products .product .image {
+    width: 100%;
+    min-height: 20rem;
+  }
+
+  .products .product .link {
+    display: block;
+  }
+}
+
+@media (width > 900px) {
+  .products .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
