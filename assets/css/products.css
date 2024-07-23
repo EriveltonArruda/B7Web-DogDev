@@ -82,6 +82,7 @@
     min-height: 20rem;
   }
 
+  /* Recolocando o "Saiba Mais" */
   .products .product .link {
     display: block;
   }
