@@ -1,0 +1,22 @@
+.products {
+  padding: 0 3rem;
+}
+
+.products h2 {
+  font-family: "Grandstander", sans-serif;
+  font-weight: bold;
+  letter-spacing: -0.1rem;
+  font-size: 4.5rem;
+  margin-bottom: 2rem;
+}
+
+.products span {
+  color: var(--secondary);
+}
+
+.products .grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  margin: 5rem 0;
+}
