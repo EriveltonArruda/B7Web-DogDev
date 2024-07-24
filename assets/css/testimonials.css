@@ -1,0 +1,23 @@
+.testimonials {
+  background-color: var(--foreground);
+  color: var(--primary);
+}
+/* Largura máxima de 600px porque quero os ícones centralizados */
+.testimonials .container {
+  max-width: 60rem;
+}
+/* Texto do depoimento */
+.testimonials .quote {
+  font-weight: bold;
+  font-size: 3rem;
+  line-height: 5rem;
+  padding: 6rem 2rem;
+  text-align: center;
+}
+/* Imagens dos ícones */
+.testimonials .icons {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 2rem;
+  margin: auto;
+}

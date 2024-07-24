@@ -43,6 +43,7 @@
 
 /* Área do texto do card */
 .products .product .info {
+  /* sem flex: 1, o texto come o espaço da imagem */
   flex: 1;
   padding: 2rem;
 }
@@ -89,6 +90,7 @@
 }
 
 @media (width > 900px) {
+  /* Em desktop teremos 4 colunas */
   .products .grid {
     grid-template-columns: repeat(4, 1fr);
   }
