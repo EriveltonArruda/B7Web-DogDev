@@ -28,6 +28,7 @@ let testimonials = [
   { quote: '"DogDev usa ingredientes simples e limpos em seus pratos."', origin: "fox.svg" },
   { quote: '"Vejo você [João] como um verdadeiro herói."', origin: "sharktank.svg" },
 ];
+
 let testimonialQuote = document.querySelector(".testimonials .quote");
 let testimonialsIcons = document.querySelector(".testimonials .icons");
 

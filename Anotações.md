@@ -48,19 +48,18 @@ if (nav.classList.contains("opened")) {
 
 ## Testimonials
 
-/_
+<!--
 Esse código terá 2 etapas
 Etapa 1: montar a estrutura
 Etapa 2: fazer a estrutura mudar sozinha
-_/
+-->
 
 <!-- Etapa 1: montar a estrutura -->
-
 <!-- Preciso ter um array com a lista de frases, essas frases serão objetos -->
 
 let testimonials = [
 
-<!-- Dentro do objeto eu preciso da frase e da imagem (nome ou link), a frase fica no quote e a imagem fica no origin, lembre-se de que preciso de aspas simples e dentro dela abro aspas duplas com a frase -->
+<!-- Dentro do objeto eu preciso da frase e da imagem (nome ou link), a frase fica no quote e a imagem fica no origin, lembre-se de que preciso de aspas simples, a aspa dupla é para ser enviado junto com o texto e aparecer na tela, afinal de contas é um depoimento. -->
 
 { quote: '"Mais do que nunca, os animais de estimação são tratados como membros da família."', origin: "cbs.svg" },
 { quote: '"DogDev é um serviço de entrega direto ao consumidor, preparado na hora com ingredientes 100% reais. Ingredientes que os humanos reconheceriam."', origin: "forbes.svg" },
@@ -68,30 +67,30 @@ let testimonials = [
 { quote: '"Vejo você [João] como um verdadeiro herói."', origin: "sharktank.svg" },
 ];
 
-<!-- Pegando a área do HTML, ou seja, a área de quote e de icons -->
+<!-- Pegando a área do HTML e armazenando em variáveis, ou seja, a área de quote e de ícones -->
 
 let testimonialQuote = document.querySelector(".testimonials .quote");
 let testimonialsIcons = document.querySelector(".testimonials .icons");
 
-<!-- Esse loop será feito na lista de frases, em cada frase será criado o elemento e será adicionado nos ícones ("icons") -->
+<!-- Esse loop será feito na lista de frases, em cada frase será criado o elemento e será adicionado nos ícones ("icons") e pegar o texto -->
 
 for (let tindex in testimonials) {
 
-<!-- criando uma tag img -->
+<!-- vou criar uma tag img -->
 
 let img = document.createElement("img");
 
-<!-- Dentro dela vamos colocar o src que é o caminho da imagem e concatenamos com o origin para pegar o nome da imagem (está em parseInt porque o tindex vem em string e pra funcionar precisamos de um número, afinal de contas, o testimonials é um array) -->
+<!-- Dentro dela (tag img) vamos colocar o src que é o caminho da imagem e concatenamos com o origin para pegar o nome da imagem (está em parseInt porque o tindex vem em string e pra funcionar precisamos de um número, afinal de contas, o testimonials é um array) -->
 
 img.setAttribute("src", "./assets/images/" + testimonials[parseInt(tindex)].origin);
 
-<!-- estilização só para mostrar que é clicável -->
+<!-- estilização só para mostrar ao usuário que é clicável -->
 
 img.style.cursor = "pointer";
 
 <!-- Quando clicar em uma imagem específica, ele vai selecionar imagem com a frase e as outras imagens ficarão com opacidade 0.2 -->
 
-img.addEventListener("click", () => img.addEventListener("click", () => fillTestimonial(parseInttindex)));
+img.addEventListener("click", () => fillTestimonial(parseInt(tindex)));
 
 <!-- Depois de pegar a imagem, adicionamos ela na área dos ícones -->
 
@@ -100,12 +99,15 @@ testimonialsIcons.appendChild(img);
 
 <!-- Etapa 2: fazer a estrutura mudar sozinha -->
 
-<!-- Preciso de uma variável indicando o item ativo no momento, também vou criar uma variável que vai armazenar o timer -->
+<!-- Preciso de uma variável indicando o item ativo no momento -->
 
 let currentTestimonial = 0;
+
+<!-- também vou criar uma variável que vai armazenar o timer -->
+
 let testimonialTimer;
 
-<!-- Vou precisar de uma função que vai preencher um testimonial, ele vai preencher, clicar no ícone, etc. Essa função terá um index que vai receber o testimonial que quero exibir -->
+<!-- Vou precisar de uma função que vai preencher um testimonial, ele vai preencher, clicar no ícone, etc. Essa função terá um index que vai receber o testimonial que quero exibir (index é o número do testimonial que quero exibir) -->
 
 const fillTestimonial = (index) => {
 
@@ -122,7 +124,7 @@ currentTestimonial = index;
 testimonialQuote.innerHTML = testimonials[currentTestimonial].quote;
 
 <!-- Quando um ícone estiver escolhido ele ficará com opacidade 1 enquanto os outros ficarão com opacidade 0.2 (isso será feito dentro do loop), mas antes eu preciso pegar a lista das imagens -->
-<!-- Pego a lista das imagens -->
+<!-- Então pego a lista das imagens -->
 
 let imgs = testimonialsIcons.querySelectorAll("img");
 
@@ -143,7 +145,7 @@ testimonialTimer = setTimeout(nextTestimonial, 3000);
 
 const nextTestimonial = () => {
 
-<!-- Se estou no testimonial 2 e tiver um 3  -->
+<!-- Nesse if vou adicionar o próximo testimonial, exemplo: Se meu testimonial atual for o 2 e o próximo for o 3  -->
 
 if (testimonials[currentTestimonial + 1]) {
 
