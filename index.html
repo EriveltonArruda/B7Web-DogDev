@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./assets/css/topics.css" />
     <link rel="stylesheet" href="./assets/css/products.css" />
     <link rel="stylesheet" href="./assets/css/testimonials.css" />
+    <link rel="stylesheet" href="./assets/css/faq.css" />
     <title>DogDev</title>
   </head>
   <body>
@@ -152,8 +153,7 @@
           <!-- Para a imagem ficar do lado do texto, a imagem foi colocada em uma imagem vazia, utilizando apenas css inline -->
           <div
             class="image"
-            style="background-image: url('./assets/images/comida-1.png')"
-          ></div>
+            style="background-image: url('./assets/images/comida-1.png')"></div>
           <div class="info">
             <p class="title">Comida cozinhada</p>
             <p class="description">
@@ -167,8 +167,7 @@
         <a href="#" class="product">
           <div
             class="image"
-            style="background-image: url('./assets/images/comida-2.png')"
-          ></div>
+            style="background-image: url('./assets/images/comida-2.png')"></div>
           <div class="info">
             <p class="title">Comida assada</p>
             <p class="description">
@@ -181,8 +180,7 @@
         <a href="#" class="product">
           <div
             class="image"
-            style="background-image: url('./assets/images/comida-3.png')"
-          ></div>
+            style="background-image: url('./assets/images/comida-3.png')"></div>
           <div class="info">
             <p class="title">Acessórios</p>
             <p class="description">
@@ -195,8 +193,7 @@
         <a href="#" class="product">
           <div
             class="image"
-            style="background-image: url('./assets/images/comida-4.png')"
-          ></div>
+            style="background-image: url('./assets/images/comida-4.png')"></div>
           <div class="info">
             <p class="title">Petiscos</p>
             <p class="description">
@@ -212,8 +209,42 @@
     <section class="testimonials">
       <div class="container">
         <!-- No quote e icons não terei nada no HTML, será tudo feito pelo JS -->
-        <div class="quote">Texto de Exemplo</div>
+        <div class="quote"></div>
         <div class="icons"></div>
+      </div>
+    </section>
+    <section class="faq container">
+      <h2>Ganhe tempo vendo <span>aqui</span></h2>
+      <div class="accordion">
+        <!-- Área do conteúdo do accordion -->
+        <!-- opened é a seta aberta e o texto visível -->
+        <div class="item opened">
+          <div class="title">
+            <p>Pergunta aqui</p>
+            <img src="./assets/images/arrow.svg" alt="" />
+          </div>
+          <div class="body">
+            <p>Texto aqui</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="title">
+            <p>Pergunta aqui</p>
+            <img src="./assets/images/arrow.svg" alt="" />
+          </div>
+          <div class="body">
+            <p>Texto aqui</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="title">
+            <p>Pergunta aqui</p>
+            <img src="./assets/images/arrow.svg" alt="" />
+          </div>
+          <div class="body">
+            <p>Texto aqui</p>
+          </div>
+        </div>
       </div>
     </section>
     <script type="text/javascript" src="./assets/js/script.js"></script>
