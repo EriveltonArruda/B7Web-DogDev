@@ -52,12 +52,12 @@
   padding-bottom: 2rem;
 }
 
-/* Quando a classe opened estiver no body o texto aparecerá */
+/* Quando a classe opened estiver no item o texto aparecerá */
 .faq .accordion .item.opened .body {
   max-height: 100vh;
 }
 
-/* e no title, a seta apontará para cima, mostrando que está aberto */
+/* Se a classe opened estiver no item, a seta apontará para cima, mostrando que está aberto */
 .faq .accordion .item.opened .title img {
   transform: rotate(180deg);
 }
