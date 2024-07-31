@@ -48,7 +48,7 @@ if (faqItems[currentFaq].classList.contains("opened")) {
 
 }
 
-<!-- Loop para abrir e fechar o faq que foi clicado -->
+<!-- Loop que vai abrir o faq que foi clicado e fechar o faq que estava aberto -->
 <!-- Quem tiver a classe opened, vai ser removido e o faq será fechado -->
 
 for (let item of faqItems) {
